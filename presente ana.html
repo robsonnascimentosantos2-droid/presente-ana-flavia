@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Ana Flávia ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f0f12;
+    color:white;
+    overflow-x:hidden;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+    url("fotos/capa.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    color:#ffb3c6;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    background:#ff4d6d;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.btn-coracao{
+    background: linear-gradient(135deg, #ff3f6d, #ff9ecb);
+    box-shadow: 0 10px 25px rgba(255, 77, 109, 0.35);
+    letter-spacing: .03em;
+}
+
+.mensagem-final{
+    opacity:0;
+    transform: translateY(25px);
+    transition: opacity .5s ease, transform .5s ease;
+    margin-top:30px;
+    padding:25px;
+    background: rgba(255, 77, 109, 0.12);
+    border: 1px solid rgba(255, 153, 198, 0.35);
+    border-radius: 22px;
+    color: #ffe4ec;
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: none;
+}
+
+.mensagem-final.visible{
+    opacity:1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.resposta-btn{
+    display:inline-block;
+    margin:20px 10px 0 10px;
+    padding:12px 24px;
+    border-radius:45px;
+    border:none;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.2s ease;
+}
+
+.resposta-btn.sim{
+    background:#ff4d6d;
+    color:#fff;
+}
+
+.resposta-btn.nao{
+    background:#ffffff22;
+    color:#ffe4ec;
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+.resposta-btn:hover{
+    transform:scale(1.03);
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.titulo{
+    text-align:center;
+    color:#ffb3c6;
+    margin-bottom:40px;
+}
+
+.contador{
+    text-align:center;
+    font-size:1.7rem;
+    line-height:2;
+}
+
+.frase{
+    text-align:center;
+    font-size:2rem;
+    font-style:italic;
+    color:#ffd6df;
+}
+
+.timeline{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.card{
+    background:#1b1b24;
+    padding:25px;
+    border-radius:20px;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.galeria img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+video{
+    width:100%;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+.carta{
+    background:#1b1b24;
+    padding:35px;
+    border-radius:20px;
+    line-height:2;
+    font-size:18px;
+}
+
+footer{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.coracao{
+    position:fixed;
+    color:#ff4d6d;
+    animation:subir 8s linear infinite;
+    z-index:999;
+}
+
+@keyframes subir{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-150px);
+        opacity:0;
+    }
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2rem;
+}
+
+.hero h2{
+    font-size:1.2rem;
+}
+
+.frase{
+    font-size:1.5rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<h1>15 de Agosto de 2022 ❤️</h1>
+
+<h2>O dia em que conheci o amor da minha vida.</h2>
+
+<p>
+De Mauro para Ana Flávia
+</p>
+
+<p>
+Uma pequena surpresa do seu Tridente 🔱🔥❤️
+</p>
+
+<a href="#historia" class="btn">
+💌 Começar nossa história
+</a>
+
+</section>
+
+<section id="historia">
+
+<h2 class="titulo">⏳ Nosso Tempo Juntos</h2>
+
+<div class="contador">
+Estamos juntos há:
+<br><br>
+<strong id="contador"></strong>
+</div>
+
+</section>
+
+<section>
+
+<div class="frase">
+❤️ Eu sempre soube que era você. ❤️
+</div>
+
+</section>
+
+<section>
+
+<h2 class="titulo">Nossa História</h2>
+
+<div class="timeline">
+
+<div class="card">
+<h3>❤️ 15/08/2022</h3>
+<p>O dia em que conheci o amor da minha vida.</p>
+</div>
+
+<div class="card">
+<h3>🤰 Nossa maior surpresa</h3>
+<p>A notícia que mudaria nossas vidas para sempre.</p>
+</div>
+
+<div class="card">
+<h3>👶 A chegada do Lucca</h3>
+<p>O momento em que nossa história virou uma família.</p>
+</div>
+
+<div class="card">
+<h3>👨‍👩‍👦 Nossa família</h3>
+<p>Nosso maior presente.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="titulo">📸 Nossos Momentos</h2>
+
+<div class="galeria">
+
+<img src="fotos/foto1.jpg" alt="">
+<img src="fotos/foto2.jpg" alt="">
+<img src="fotos/foto3.jpg" alt="">
+<img src="fotos/foto4.jpg" alt="">
+<img src="fotos/foto5.jpg" alt="">
+<img src="fotos/foto6.jpg" alt="">
+<img src="fotos/foto7.jpg" alt="">
+<img src="fotos/foto8.jpg" alt="">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="titulo">🎥 Nossas Memórias</h2>
+
+<video controls>
+<source src="videos/video1.mp4" type="video/mp4">
+</video>
+
+<video controls>
+<source src="videos/video2.mp4" type="video/mp4">
+</video>
+
+<video controls>
+<source src="videos/video3.mp4" type="video/mp4">
+</video>
+
+</section>
+
+<section style="text-align:center;">
+
+<h2 class="titulo">🎵 Uma música que me lembra você</h2>
+
+<a
+href="SEU_LINK_DA_MUSICA_AQUI"
+target="_blank"
+class="btn">
+
+🎵 Ouvir
+
+</a>
+
+</section>
+
+<section>
+
+<h2 class="titulo">💌 Uma Carta Para Você</h2>
+
+<div class="carta">
+
+<p><strong>Ana Flávia,</strong></p>
+
+<br>
+
+<p>
+Quando eu te conheci, em 15 de agosto de 2022, eu estava em um momento da minha vida em que já não acreditava muito no amor.
+</p>
+
+<p>
+Então você apareceu.
+</p>
+
+<p>
+E desde o primeiro momento eu senti que havia algo diferente em você. Pode parecer clichê, mas foi quase amor à primeira vista. E desde aquele dia, no fundo do meu coração, eu sempre soube que era você.
+</p>
+
+<p>
+Nossa história começou rápido. Muito mais rápido do que qualquer um poderia imaginar. E foi assim que recebemos o maior presente que a vida poderia nos dar: o Lucca.
+</p>
+
+<p>
+Quando descobri que você estava grávida, senti que tinha uma missão. A missão de fazer você feliz. A missão de fazer com que um dia você olhasse para trás e pudesse dizer que viveu uma história bonita, que foi amada e que foi importante.
+</p>
+
+<p>
+Quando vi o Lucca pela primeira vez, a ficha caiu. Eu realmente seria pai. Mas uma das maiores alegrias daquele momento era saber que era você quem estava ao meu lado.
+</p>
+
+<p>
+Era você quem estava construindo aquela família comigo.
+</p>
+
+<p>
+Uma das coisas que mais admiro em você é a sua força. Você é uma mulher incrível, guerreira, companheira e que sempre protege quem ama.
+</p>
+
+<p>
+Você me defende com unhas e dentes. Você se preocupa comigo. Você vive intensamente os momentos ao meu lado.
+</p>
+
+<p>
+E eu amo isso em você.
+</p>
+
+<p>
+Talvez eu nem sempre demonstre tudo da melhor forma. Talvez eu erre mais do que gostaria.
+</p>
+
+<p>
+Mas existe uma verdade que nunca mudou:
+</p>
+
+<p>
+<strong>Eu amo você.</strong>
+</p>
+
+<p>
+Você é o amor da minha vida.
+</p>
+
+<p>
+Mesmo quando tentei convencer a mim mesmo do contrário, eu sempre soube.
+</p>
+
+<p>
+Porque não existe outra pessoa que ocupe o lugar que você ocupa na minha vida.
+</p>
+
+<p>
+Você é minha escolha.
+</p>
+
+<p>
+Você sempre foi.
+</p>
+
+<p>
+E continuará sendo.
+</p>
+
+<p>
+Meu sonho é que daqui muitos anos a gente olhe para trás e dê risada das dificuldades, dos medos e dos desafios.
+</p>
+
+<p>
+E que possamos dizer:
+</p>
+
+<p>
+"Nós vivemos intensamente."
+</p>
+
+<p>
+"Nós crescemos."
+</p>
+
+<p>
+"E apesar de tudo, continuamos juntos."
+</p>
+
+<p>
+Eu quero ver nossa casa pronta.
+</p>
+
+<p>
+Quero ver você conquistando seus sonhos.
+</p>
+
+<p>
+Quero continuar construindo nossa vida.
+</p>
+
+<p>
+E quero continuar escolhendo você todos os dias.
+</p>
+
+<p>
+Se existe uma verdade absoluta dentro de mim, é esta:
+</p>
+
+<p>
+<strong>Eu amo você mais do que consigo explicar.</strong>
+</p>
+
+<p>
+E, se Deus permitir, quero viver o resto da minha vida ao seu lado.
+</p>
+
+<p>
+Obrigado por tudo.
+</p>
+
+<p>
+Obrigado pelo Lucca.
+</p>
+
+<p>
+Obrigado por nós.
+</p>
+
+<p>
+Obrigado por existir.
+</p>
+
+<br>
+
+<p>
+Com todo o meu amor,
+</p>
+
+<p>
+<strong>Seu Tridente 🔱🔥❤️</strong>
+</p>
+
+</div>
+
+</section>
+
+<section style="text-align:center; padding-bottom:40px;">
+<button id="botaoSurpresa" class="btn btn-coracao" type="button">
+❤️ Surpresa Final
+</button>
+<div id="mensagemFinal" class="mensagem-final">
+<p>ana flavia, ta disposta a se estressar comigo o resto da vida? casa cmg?</p>
+<div>
+<button id="respostaSim" class="resposta-btn sim" type="button">Sim 💍</button>
+<button id="respostaNao" class="resposta-btn nao" type="button">Não 😅</button>
+</div>
+<div id="resultadoResposta" style="margin-top:18px; font-size:1.2rem;
+    color:#ffe4ec; min-height:2.4rem;
+    opacity:0; transition: opacity .4s ease;"></div>
+</div>
+</section>
+
+<footer>
+
+<h2>Para o meu amor ❤️</h2>
+
+<br>
+
+<p>
+As duas pessoas mais importantes da minha vida.
+</p>
+
+<br>
+
+<h3>
+Eu sempre soube que era você.
+</h3>
+
+<br>
+
+<p>
+🔱🔥❤️
+</p>
+
+</footer>
+
+<script>
+
+const inicio = new Date(2022,7,15);
+
+function atualizarContador(){
+
+const hoje = new Date();
+
+let anos = hoje.getFullYear() - inicio.getFullYear();
+let meses = hoje.getMonth() - inicio.getMonth();
+let dias = hoje.getDate() - inicio.getDate();
+
+if(dias < 0){
+meses--;
+
+const ultimoMes = new Date(
+hoje.getFullYear(),
+hoje.getMonth(),
+0
+).getDate();
+
+dias += ultimoMes;
+}
+
+if(meses < 0){
+anos--;
+meses += 12;
+}
+
+document.getElementById("contador").innerHTML =
+`${anos} anos, ${meses} meses e ${dias} dias ❤️`;
+
+}
+
+atualizarContador();
+
+function criarCoracao(){
+
+const coracao = document.createElement("div");
+
+coracao.className = "coracao";
+
+coracao.innerHTML = "❤️";
+
+coracao.style.left = Math.random()*100 + "vw";
+
+coracao.style.fontSize =
+(Math.random()*20+15)+"px";
+
+document.body.appendChild(coracao);
+
+setTimeout(()=>{
+coracao.remove();
+},8000);
+
+}
+
+setInterval(criarCoracao,600);
+
+const botaoSurpresa = document.getElementById("botaoSurpresa");
+const mensagemFinal = document.getElementById("mensagemFinal");
+const respostaSim = document.getElementById("respostaSim");
+const respostaNao = document.getElementById("respostaNao");
+const resultadoResposta = document.getElementById("resultadoResposta");
+
+botaoSurpresa.addEventListener("click", () => {
+    mensagemFinal.classList.add("visible");
+    botaoSurpresa.textContent = "💖 Escolha uma opção";
+    botaoSurpresa.disabled = true;
+});
+
+function mostrarResultado(texto) {
+    resultadoResposta.textContent = texto;
+    resultadoResposta.style.opacity = "1";
+    respostaSim.disabled = true;
+    respostaNao.disabled = true;
+}
+
+respostaSim.addEventListener("click", () => {
+    mostrarResultado("Sim! 💍 Eu topo! Vamos ser felizes juntos para sempre.");
+});
+
+respostaNao.addEventListener("click", () => {
+    mostrarResultado("KKK, tudo bem! Se você disser não, eu aceito me casar com você só para poder reclamar da sua bagunça até o fim dos meus dias. 😂💘");
+});
+
+</script>
+
+</body>
+</html>
